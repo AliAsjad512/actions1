@@ -1,0 +1,28 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+
+on:
+  push:
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  first_job:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      #- uses: actions/checkout@v4
+
+      # Runs a single command using the runners shell
+      - name: Welcome Message
+        run: echo "My first Github actions job"
+
+      # Runs a set of commands using the runners shell
+      - name: List files on repo
+        run: ls
+        
+      - name: Read file
+        run: cat README.md
+         
