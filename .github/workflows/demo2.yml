@@ -9,3 +9,10 @@ jobs:
     steps:
       - name: Create a text file
         run: echo "Hello, world!" > hello.txt
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: List file
+        run: ls
+      - name: Test file content
+        run: cat hello.txt | grep -i "Hello, world!"   
