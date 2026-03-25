@@ -9,10 +9,17 @@ jobs:
     steps:
       - name: Create a text file
         run: echo "Hello, world!" > hello.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hello-file
+          path: hello.txt
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: List file
-        run: ls
-      - name: Test file content
-        run: cat hello.txt | grep -i "Hello, world!"   
+    - uses: actions/download-artifact@v8
+      with:
+        name: hello-file
+    - name: List file
+      run: ls -l hello.txt
+    - name: Test file content file
+      run: cat hello.txt | grep -i "Hello, world!"   
