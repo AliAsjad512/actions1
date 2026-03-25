@@ -1,0 +1,24 @@
+name: Scripted Pipeline
+
+
+on:
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  Greet:
+    runs-on: ubuntu-latest
+    steps:
+        - run: echo "Hello, world!"
+  Build:
+    runs-on: ubuntu-latest
+    needs: Greet
+    steps:
+        - run: echo "Building the project..."
+               sleep 5
+  Test:
+    runs-on: ubuntu-latest
+    needs: [Build]
+    steps:
+        - run: |-
+            echo "Testing the project at ${date}"
