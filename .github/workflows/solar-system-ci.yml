@@ -23,3 +23,7 @@ jobs:
         run: |
           cd solar-system
           npm install --no-audit
+      - name: Unit Testing
+        run: |
+          cd solar-system
+          npm test
