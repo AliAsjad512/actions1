@@ -8,7 +8,7 @@ jobs:
    install-dependencies:
     runs-on: ubuntu-latest
     steps:
-        - name: Checkout Repos
+        - name: Checkout Repostories
           uses: actions/checkout@v4
       
         - name: List repo files
