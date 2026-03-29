@@ -17,7 +17,7 @@ jobs:
 
 
     steps:
-      - name: Checkout Repositoriesy
+      - name: Checkout Repositoriesy with submodules
         uses: actions/checkout@v4
 
       - name: List repo files
