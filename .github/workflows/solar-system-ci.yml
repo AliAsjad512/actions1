@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 env:
-  MONGO_URI: "mongodb+srv://ali:jTR2FWJxr3zUcZie@cluster0.msgjcjv.mongodb.net/myDatabase?retryWrites=true&w=majority"
+  MONGO_URI: "mongodb+srv://haider:asjad@cluster0.msgjcjv.mongodb.net/myDatabase?retryWrites=true&w=majority"
   MONGO_USERNAME: ${{ vars.MONGO_USERNAME }}
   MONGO_PASSWORD: ${{ secrets.MONGO_PASSWORD }}
 
